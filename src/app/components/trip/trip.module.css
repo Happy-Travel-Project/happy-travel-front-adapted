@@ -1,0 +1,49 @@
+.ctTrip {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 260px;
+    height: 333px;
+    border-radius: 20px;
+}
+
+.ctImg {
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.imgTrip {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.ctTxt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+    height: 100px;
+    background-color: var(--yellow-color);
+    border-radius: 20px;
+    padding: 15px;
+    color: var(--blue-color);
+    margin-top: -20px; /* crea superposición visual */
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ctTxt h6 {
+    font-size: var(--font-size-s);
+}
+
+.ctTxt p {
+    font-size: var(--font-size-xs);
+}

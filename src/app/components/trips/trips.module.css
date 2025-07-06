@@ -1,0 +1,34 @@
+.ctTrips {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px;
+    max-width: 1100px;
+}
+
+.ctEmpty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.txtError {
+    color: var(--red-color);
+    font-size: var(--font-size-s);
+}
+
+.btTrip {
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    color: var(--yellow-color);
+    font-weight: var(--font-bold);
+    cursor: pointer;
+}
