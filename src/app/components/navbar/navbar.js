@@ -1,11 +1,11 @@
 'use client';
 import Image from 'next/image';
-import logo from '../../../../public/Logo.svg';
-import home from '../../../../public/Home-icon.svg';
-import myPage from '../../../../public/myDestinations-icon.svg';
-import avatar from '../../../../public/Avatar-icon.svg';
-import logout from '../../../../public/Logout-icon.svg';
-import create from '../../../../public/Create-icon.svg';
+import logo from '../../../../public/Logo.png';
+import home from '../../../../public/Home-icon.png';
+import myPage from '../../../../public/myDestinations-icon.png';
+import avatar from '../../../../public/Avatar-icon.png';
+import logout from '../../../../public/Logout-icon.png';
+import create from '../../../../public/Create-icon.png';
 import styles from './navbar.module.css';
 import Link from 'next/link';
 import { useAuthContext } from '@/context/authContext';
@@ -18,16 +18,16 @@ function Navbar() {
     <header className={styles.ctHeader}>
       <Image
         src={logo}
-        width={165}
-        height={78}
+        width={85}
+        height={85}
         alt='happy travel logo'
       />
       <nav className={styles.ctNav}>
         <Link href={'/'}>
           <Image
             src={home}
-            width={40}
-            height={40}
+                width={60}
+                height={60}
             alt='home'
           />
         </Link>
@@ -37,24 +37,24 @@ function Navbar() {
             <Link href='/auth'>
               <Image
                 src={myPage}
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 alt='mis destinos'
               />
             </Link>
             <Link href='/create'>
               <Image
                 src={create}
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 alt='crear destino'
               />
             </Link>
             <Link href='/auth/logout'>
               <Image
                 src={logout}
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 alt='logout'
                 className={styles.imgLogout}
               />
@@ -66,8 +66,8 @@ function Navbar() {
           <Link href={'/login'}>
             <Image
               src={avatar}
-              width={40}
-              height={40}
+                width={60}
+                height={60}
               alt='login'
             />
           </Link>)

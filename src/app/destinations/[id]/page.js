@@ -6,8 +6,8 @@ import { TripsService } from "@/services/tripsService";
 import { useAuthContext } from '@/context/authContext';
 import Link from 'next/link';
 import Image from "next/image";
-import edit from '../../../../public/Edit-icon.svg';
-import del from '../../../../public/Delete-icon.svg';
+import edit from '../../../../public/Edit-icon.png';
+import del from '../../../../public/Delete-icon.png';
 import styles from './page.module.css';
 
 export default function TripDetailPage({ params }) {
@@ -54,8 +54,8 @@ export default function TripDetailPage({ params }) {
 
     return (
         <div className={styles.ctTripDetail}>
-            <h1 className={styles.title}>{trip.country}</h1>
-            <p className={styles.title}>{trip.city}</p>
+            <h1 className={styles.title}>{trip.title}</h1>
+            <p className={styles.title}>{trip.city}, {trip.country}</p>
             <div className={styles.ctImg}>
                 <Image
                     src={trip.image}
