@@ -38,7 +38,7 @@ export default function TripDetailPage({ params }) {
             <div className={styles.ctPage}>
                 <h2>{error}</h2>
                 <button onClick={() => router.back()} className={styles.btCancel}>
-                    Volver
+                    Back
                 </button>
             </div>
         );
@@ -47,7 +47,7 @@ export default function TripDetailPage({ params }) {
     if (!trip) {
         return (
             <div className={styles.ctPage}>
-                <h2>Cargando destino...</h2>
+                <h2>Loading destination...</h2>
             </div>
         );
     }
