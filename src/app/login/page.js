@@ -29,7 +29,7 @@ export default function Page() {
             router.push("/auth");
         } catch (err) {
             console.error(err);
-            setError(err.response?.data?.message || "Error de autenticación");
+            setError(err.response?.data?.message || "Authentication error");
         }
     };
 
@@ -51,7 +51,7 @@ export default function Page() {
         <div className={styles.ctPage}>
             <div className={styles.ctForm}>
                 <form onSubmit={handleSubmit} className={styles.formLogin}>
-                    <h3 className={styles.txtTitle}>Acceso de usuario</h3>
+                    <h3 className={styles.txtTitle}>User Login</h3>
                     <hr />
                     <label htmlFor="username" className={styles.lbLogin}>
                         User Name
@@ -80,7 +80,7 @@ export default function Page() {
                     <span className={styles.sLogin}>{error}</span>
 
                     <div className={styles.ctButtons}>
-                        <button type="submit" className={`${styles.btLogin} ${styles.btAccept}`}>Aceptar</button>
+                        <button type="submit" className={`${styles.btLogin} ${styles.btAccept}`}>Accept</button>
                         <button
                             type="button"
                             onClick={() => {
@@ -89,10 +89,10 @@ export default function Page() {
                             }}
                             className={`${styles.btLogin} ${styles.btCancel}`}
                         >
-                            Cancelar
+                            Cancel
                         </button>
                     </div>
-                    <p className={styles.txtSignIn}>¿Aún no tienes cuenta? Regístrate <span><Link href={'/signin'}>aquí</Link></span></p>
+                    <p className={styles.txtSignIn}>Don't have an account yet? Sign up <span><Link href={'/signin'}>here</Link></span></p>
                 </form>
             </div>
         </div>

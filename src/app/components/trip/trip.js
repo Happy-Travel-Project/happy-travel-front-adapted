@@ -31,8 +31,8 @@ function Trip({ trip }) {
 
 			<div className={styles.ctTxt}>
 				<div>
-					<h6>{country}</h6>
-					<p>{city}</p>
+					<h3>{city}</h3>
+					<p>{country}</p>
 				</div>
 				{isOwner && showEditDelete && (
 					<div>

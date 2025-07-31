@@ -26,7 +26,7 @@ export default function Page() {
             router.push("/login");
         } catch (err) {
             console.error(err);
-            setError(err.response?.data?.message || "Error en el registro");
+            setError(err.response?.data?.message || "Registration error");
         }
     };
 
@@ -39,7 +39,7 @@ export default function Page() {
     };
 
     const handleCancel = () => {
-        setLoginData(initialSignin);
+        setSigninData(initialSignin);
         setError("");
     };
 
@@ -48,16 +48,16 @@ export default function Page() {
         <div className={styles.ctPage}>
             <div className={styles.ctForm}>
                 <form onSubmit={handleSubmit} className={styles.formLogin}>
-                    <h3 className={styles.txtTitle}>Registro de usuario</h3>
+                    <h3 className={styles.txtTitle}>User Registration</h3>
                     <hr />
 
                     <label htmlFor="username" className={styles.lbLogin}>
-                        Nombre
+                        Name
                         <input
                             type="username"
                             name="username"
                             id="username"
-                            placeholder="Nombre..."
+                            placeholder="Name..."
                             value={signinData.username}
                             onChange={handleInput}
                             className={styles.inptLogin} />
@@ -90,7 +90,7 @@ export default function Page() {
                     <span className={styles.sLogin}>{error}</span>
 
                     <div className={styles.ctButtons}>
-                        <button type="submit" className={`${styles.btLogin} ${styles.btAccept}`}>Aceptar</button>
+                        <button type="submit" className={`${styles.btLogin} ${styles.btAccept}`}>Accept</button>
                         <button
                             type="button"
                             onClick={() => {
@@ -99,10 +99,10 @@ export default function Page() {
                             }}
                             className={`${styles.btLogin} ${styles.btCancel}`}
                         >
-                            Cancelar
+                            Cancel
                         </button>
                     </div>
-                    <p className={styles.txtSignIn}>¿Ya tienes cuenta? Inicia sesión <span><Link href={'/login'}>aquí</Link></span></p>
+                    <p className={styles.txtSignIn}>Already have an account? Log in <span><Link href={'/login'}>here</Link></span></p>
                 </form>
             </div>
         </div>

@@ -55,13 +55,15 @@ export default function AuthPage() {
           <p>You haven't created any destinations yet.</p>
           <button 
             onClick={() => router.push('/create')}
-            style={{ 
-              padding: '10px 20px', 
-              backgroundColor: '#28a745', 
-              color: 'white', 
+          style={{
+              backgroundColor: 'var(--green-color)',
+              color: 'white',
+              fontWeight: 'var(--font-bold)',
+              padding: '0.7rem 1.5rem',
               border: 'none',
-              marginTop: '10px',
-              cursor: 'pointer'
+              borderRadius: '6px',
+              cursor: 'pointer',
+              marginRight: '1rem'
             }}
           >
             Create my first destination

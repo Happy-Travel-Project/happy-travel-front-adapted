@@ -18,8 +18,6 @@ export default function TripDetailPage({ params }) {
     const router = useRouter();
     const api = TripsService();
 
-    
-
     useEffect(() => {
         if (!id) return;
 
@@ -27,10 +25,10 @@ export default function TripDetailPage({ params }) {
             .then(res => setTrip(res.data))
             .catch(err => {
                 console.error(err);
-                setError("Destino no encontrado");
+                setError("Destination not found");
                 setTrip(null);
             });
-            
+
     }, [id]);
 
     if (error) {

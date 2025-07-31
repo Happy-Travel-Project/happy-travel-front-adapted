@@ -22,6 +22,7 @@ function Navbar() {
         height={85}
         alt='happy travel logo'
       />
+      <h1 className={styles.ctH1}>NOMAD PULSE</h1>
       <nav className={styles.ctNav}>
         <Link href={'/'}>
           <Image

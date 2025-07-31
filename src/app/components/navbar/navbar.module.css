@@ -7,6 +7,12 @@
     padding: 15px;
 }
 
+.ctH1 {
+    color: var(--green-color);
+    font-weight: var(--font-bold);
+    font-family: 'Barlow', sans-serif;
+}
+
 .ctNav {
     display: flex;
     justify-content: center;
